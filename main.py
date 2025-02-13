@@ -109,8 +109,8 @@ app.add_middleware(
 )
 
 # MongoDB Credentials from Render Environment Variables
-MONGO_CONNECTION_STRING = os.getenv("MONGO_CONNECTION_STRING", "your_default_connection_string_here")
-DATABASE_NAME = os.getenv("DATABASE_NAME", "InvenX")
+MONGO_CONNECTION_STRING = os.getenv("MONGO_CONNECTION_STRING")
+DATABASE_NAME = os.getenv("InvenX")
 
 # Initialize Forecaster
 forecaster = DemandForecaster(MONGO_CONNECTION_STRING, DATABASE_NAME)
